@@ -1,0 +1,30 @@
+
+.main-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 15%;
+    width: 80%;
+    height: 85%;
+    left:10%;
+}
+
+.bee-zone, .words {
+    text-align: center;
+    width: 50%;
+    height: 100%
+}
+
+.words {
+    border: .5px solid grey;
+}
+
+.cell {
+    position: absolute;
+    height: 104px;
+    width: 120px;
+}
+
+.center.polygon {
+    background-color: yellow;
+}
