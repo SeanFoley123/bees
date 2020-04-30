@@ -4,14 +4,12 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     puzzle_details = json;
     console.log(puzzle_details.official_letters);
     console.log(json);
-    // puzzle_details = JSON.parse(json); // this will show the info it in firebug console
 });
 
-// fetch("saved_puzzles/offical_puzzle_2020-04-29.json")
-//   .then(response => response.json())
-//   .then(json => console.log(json));
 
-// var puzzle_details = JSON.parse
+function check_word_and_submit(word) {
+    console.log(puzzle_details.official_words.includes(word));
+}
 
 $('body').keydown(function(event){
     var key_pressed = String.fromCharCode(event.which);
@@ -22,6 +20,6 @@ $('body').keydown(function(event){
         }
     }
     else if (event.which == '13') {
-        console.log('submit');
+
     }
 })
