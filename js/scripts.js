@@ -1,6 +1,7 @@
 
 var puzzle_details = {};
 $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
+    console.log(json);
     puzzle_details = JSON.parse(json); // this will show the info it in firebug console
 });
 
