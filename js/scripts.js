@@ -12,18 +12,24 @@ function check_word_and_submit(word) {
         console.log(word);
         $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
     }
-    else {
-        $('.letters_entered').text('');
-    }
+    $('.letters_entered').text('');
 }
 
 $('body').keydown(function(event){
     var key_pressed = String.fromCharCode(event.which);
     if (key_pressed.match(/[a-z]/i)) {
         if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
-            console.log(key_pressed);
-            $('.letters_entered').append(key_pressed.toUpperCase());
+            if (puzzle_details.central_letter_options.includes(key_pressed)){
+                $('.letters_entered').append('<span class=\'central_letter\'>')
+            }
+            else {
+                $('.letters_entered').append('<span class=\'normal_letter\'>')
+            }
         }
+        else {
+            $('.letters_entered').append('<span class=\'invalid_letter\'>')
+        }
+        $('.letters_entered').append(key_pressed.toUpperCase() + '</span>')
     }
     else if (event.which == '13') {
         check_word_and_submit($('.letters_entered').text())
