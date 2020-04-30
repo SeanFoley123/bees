@@ -9,6 +9,10 @@
     left:10%;
 }
 
+.column {
+    padding: 15px;
+}
+
 .bee-zone, .words {
     text-align: center;
     width: 50%;
