@@ -1,6 +1,7 @@
 
+var puzzle_details = {};
 $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
-    var puzzle_details = JSON.parse(json); // this will show the info it in firebug console
+    puzzle_details = JSON.parse(json); // this will show the info it in firebug console
 });
 
 // fetch("saved_puzzles/offical_puzzle_2020-04-29.json")
@@ -12,6 +13,8 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
 $('body').keydown(function(event){
     var key_pressed = String.fromCharCode(event.which);
     if (key_pressed.match(/[a-z]/i)) {
-        console.log(key_pressed.toUpperCase());
+        if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
+            $('.letters_entered').innerHTML += key_pressed.toUpperCase();
+        }
     }
 })
