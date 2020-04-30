@@ -34,5 +34,7 @@
 }
 
 .invalid_letter {
-    color:grey;
+  color: #0066FF;
+  font-family:arial;
+  font-size: 6px
 }
