@@ -1,6 +1,6 @@
 
 $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
+    var puzzle_details = JSON.parse(json); // this will show the info it in firebug console
 });
 
 // fetch("saved_puzzles/offical_puzzle_2020-04-29.json")
