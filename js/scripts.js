@@ -21,4 +21,7 @@ $('body').keydown(function(event){
             $('.letters_entered').append(key_pressed.toUpperCase());
         }
     }
+    else if (event.which == '13') {
+        console.log('submit');
+    }
 })
