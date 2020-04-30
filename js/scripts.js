@@ -2,6 +2,7 @@
 var puzzle_details = {};
 $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     puzzle_details = json;
+    console.log(puzzle_details.official_letters);
     console.log(json);
     // puzzle_details = JSON.parse(json); // this will show the info it in firebug console
 });
