@@ -28,3 +28,11 @@
 .center.polygon {
     background-color: yellow;
 }
+
+.central_letter {
+    color:yellow;
+}
+
+.invalid_letter {
+    color:grey;
+}
