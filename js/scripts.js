@@ -8,7 +8,9 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
 
 
 function check_word_and_submit(word) {
-    console.log(puzzle_details.official_words.includes(word));
+    if (puzzle_details.official_words.includes(word.toLowerCase())) {
+        console.log(word);
+    }
 }
 
 $('body').keydown(function(event){
@@ -20,6 +22,9 @@ $('body').keydown(function(event){
         }
     }
     else if (event.which == '13') {
-
+        check_word_and_submit($('.letters_entered').text())
+    }
+    else if (event.which == '8') {
+        $('.letters_entered').text($('.letters_entered').text().slice(0, -1))
     }
 })
