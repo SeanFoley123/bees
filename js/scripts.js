@@ -17,7 +17,8 @@ $('body').keydown(function(event){
     var key_pressed = String.fromCharCode(event.which);
     if (key_pressed.match(/[a-z]/i)) {
         if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
-            $('.letters_entered').innerHTML += key_pressed.toUpperCase();
+            console.log(key_pressed);
+            $('.letters_entered').append(key_pressed.toUpperCase());
         }
     }
 })
