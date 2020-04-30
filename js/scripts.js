@@ -18,20 +18,23 @@ function check_word_and_submit(word) {
 $('body').keydown(function(event){
     if (!event.ctrlKey) {
         var key_pressed = String.fromCharCode(event.which);
+        var new_element = '';
         if (key_pressed.match(/[a-z]/i)) {
             if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
                 if (puzzle_details.central_letter_options.includes(key_pressed.toLowerCase())){
-                    $('.letters_entered').append('<span class=\'central_letter\'>')
+                    new_element += '<span class=\'central_letter\'>';
                 }
                 else {
-                    $('.letters_entered').append('<span class=\'normal_letter\'>')
+                    new_element += '<span class=\'normal_letter\'>';
                 }
             }
             else {
-                $('.letters_entered').append('<span class=\'invalid_letter\'>')
+                new_element += '<span class=\'invalid_letter\'>';
             }
-            $('.letters_entered').append(key_pressed.toUpperCase())
-            $('.letters_entered').append('</span>')
+            new_element += key_pressed.toUpperCase();
+            new_element += '</span>';
+            console.log(new_element);
+            $('.letters_entered').append(new_element);
         }
         else if (event.which == '13') {
             check_word_and_submit($('.letters_entered').text())
