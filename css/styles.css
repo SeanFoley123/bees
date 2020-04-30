@@ -29,12 +29,14 @@
     background-color: yellow;
 }
 
+.letter {
+    font-size: 30px;
+}
+
 .central_letter {
-    color:yellow;
+    color: #f8cd05;
 }
 
 .invalid_letter {
-  color: #0066FF;
-  font-family:arial;
-  font-size: 6px
+    color: #dcdcdc;
 }

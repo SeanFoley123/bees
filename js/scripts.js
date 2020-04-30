@@ -22,18 +22,17 @@ $('body').keydown(function(event){
         if (key_pressed.match(/[a-z]/i)) {
             if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
                 if (puzzle_details.central_letter_options.includes(key_pressed.toLowerCase())){
-                    new_element += '<span class=\'central_letter\'>';
+                    new_element += '<span class=\'letter central_letter\'>';
                 }
                 else {
-                    new_element += '<span class=\'normal_letter\'>';
+                    new_element += '<span class=\'letter normal_letter\'>';
                 }
             }
             else {
-                new_element += '<span class=\'invalid_letter\'>';
+                new_element += '<span class=\'letter invalid_letter\'>';
             }
             new_element += key_pressed.toUpperCase();
             new_element += '</span>';
-            console.log(new_element);
             $('.letters_entered').append(new_element);
         }
         else if (event.which == '13') {
