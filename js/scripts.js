@@ -40,6 +40,7 @@ $('body').keydown(function(event){
             check_word_and_submit($('.letters_entered').text())
         }
         else if (event.which == '8') {
+            $('.letters_entered > span:last').remove();
         }
     }
 })
