@@ -23,7 +23,7 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     function check_word_and_submit(word) {
         if (puzzle_details.official_words.includes(word.toLowerCase()) && !(accepted_words.includes(word.toLowerCase()))) {
             $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
-            accepted_words.push(word.toUpperCase());
+            accepted_words.push(word.toLowerCase());
             if (word.length == 4){
                 score += 1;
             }
