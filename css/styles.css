@@ -24,11 +24,6 @@
     border: .5px solid grey;
 }
 
-.hive {
-    width:100%;
-    border:1px solid black;
-}
-
 .cell {
     position: absolute;
     /*height: 104px;*/
