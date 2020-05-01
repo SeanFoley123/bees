@@ -37,14 +37,17 @@
     height: auto;
 }
 
-.cell {
-    position: absolute;
-    /*height: 104px;*/
-    /*width: 120px;*/
+.hex {
+    fill: #e6e6e6;
+    stroke: black;
 }
 
-.center.polygon {
-    background-color: #f8cd05;
+.hex:hover {
+    stroke: #05aff8;
+}
+
+.center {
+    fill: #f8cd05;
 }
 
 .letter {
