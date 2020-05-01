@@ -30,6 +30,9 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
                 if (puzzle_details.pangrams.includes(word.toLowerCase())) {score += 7};
             }
             $('#score').text(score);
+            if(score > puzzle_details.points_for_genius) {
+                $('#score').addClass('so_smart')
+            }
         }
         $('.letter').remove();
     }

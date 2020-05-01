@@ -27,9 +27,9 @@
 
 .letters_entered {
     text-align: center;
-    height: 100px;
+    height: 70px;
     font-size: 50px;
-    line-height: 100px;
+    line-height: 70px;
 }
 
 .cursor {
@@ -89,4 +89,15 @@ li {
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+}
+
+#score {
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.so_smart {
+    color:green;
 }
