@@ -46,7 +46,7 @@ $('body').keydown(function(event){
             }
             new_element += key_pressed.toUpperCase();
             new_element += '</span>';
-            $('.letters_entered').append(new_element);
+            $(new_element).insertBefore('.cursor');
         }
         else if (event.which == '13') {
             check_word_and_submit($('.letters_entered').text())
