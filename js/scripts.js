@@ -25,7 +25,7 @@ function check_word_and_submit(word) {
         console.log(word);
         $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
     }
-    $('.letters_entered').text('');
+    $('.letter').remove();
 }
 
 $('body').keydown(function(event){
@@ -56,16 +56,3 @@ $('body').keydown(function(event){
         }
     }
 })
-
-console.log(puzzle_details)
-var outer_letters = puzzle_details.official_letters;
-var index = outer_letters.indexOf(puzzle_details.central_letter_options[0]);
-if (index > -1) {
-  outer_letters.splice(index, 1);
-}
-
-$('.label').each(function(i, element){
-    $(this).text(outer_letters.pop());
-})
-
-$('.center_label').text(puzzle_details.central_letter_options[0]);
