@@ -28,6 +28,11 @@
 .letters_entered {
     text-align: center;
     height: 100px;
+    font-size: 50px;
+}
+
+.letters_entered > strong {
+    color: #f8cd05;
 }
 
 .hive {
