@@ -29,7 +29,7 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
                 score += word.length;
                 if (puzzle_details.pangrams.includes(word.toLowerCase())) {score += 7};
             }
-            console.log(score);
+            $('#score').text(score);
         }
         $('.letter').remove();
     }
