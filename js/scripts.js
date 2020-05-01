@@ -43,3 +43,15 @@ $('body').keydown(function(event){
         }
     }
 })
+
+var outer_letters = puzzle_details.official_letters;
+const index = outer_letters.indexOf(puzzle_details.central_letter_options[0]);
+if (index > -1) {
+  outer_letters.splice(index, 1);
+}
+
+$('.label').each(function(i, element){
+    $(this).text(outer_letters.pop());
+})
+
+$('.center_label').text(puzzle_details.central_letter_options[0]);
