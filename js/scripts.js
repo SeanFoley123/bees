@@ -13,10 +13,10 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     }
 
     $('.label').each(function(i, element){
-        $(this).text(outer_letters.pop());
+        $(this).text(outer_letters.pop().toUpperCase());
     })
 
-    $('.center_label').text(puzzle_details.central_letter_options[0]);
+    $('.center_label').text(puzzle_details.central_letter_options[0].toUpperCase());
 })
 
 
