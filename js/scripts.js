@@ -23,11 +23,13 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
         if (puzzle_details.official_words.includes(word.toLowerCase())) {
             $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
             if (word.length == 4){
-                console.log(1)
+                score += 1;
             }
             else {
-                console.log(word.length);
+                score += word.length;
+                if (puzzle_details.pangrams.includes(word.toLowerCase())) {score += 7};
             }
+            console.log(score);
         }
         $('.letter').remove();
     }
