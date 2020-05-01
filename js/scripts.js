@@ -6,7 +6,7 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     console.log(json);
 }).then(function() {
     console.log(puzzle_details);
-    var outer_letters = puzzle_details.official_letters;
+    var outer_letters = puzzle_details.official_letters.slice();
     var index = outer_letters.indexOf(puzzle_details.central_letter_options[0]);
     if (index > -1) {
       outer_letters.splice(index, 1);
