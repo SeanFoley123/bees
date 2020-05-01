@@ -31,7 +31,7 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
             var key_pressed = String.fromCharCode(event.which);
             var new_element = '';
             if (key_pressed.match(/[a-z]/i)) {
-                console.log(letter);
+                console.log(key_pressed);
                 console.log(puzzle_details.official_letters);
                 if (puzzle_details.official_letters.includes(key_pressed.toLowerCase())) {
                     if (puzzle_details.central_letter_options.includes(key_pressed.toLowerCase())){

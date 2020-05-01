@@ -32,7 +32,7 @@
     line-height: 100px;
 }
 
-.letters_entered > .cursor {
+.cursor {
     color: #f8cd05;
     animation: blink 1s linear infinite alternate;
 }
