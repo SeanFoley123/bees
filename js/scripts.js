@@ -23,7 +23,7 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
             console.log(word);
             $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
         }
-        $('.letter').remove();
+        $('.just_the_letters').text('');
     }
 
     $('body').keydown(function(event){
@@ -46,13 +46,13 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
                 }
                 new_element += key_pressed.toUpperCase();
                 new_element += '</span>';
-                $(new_element).insertBefore('.cursor');
+                $('just_the_letters').append(new_element);
             }
             else if (event.which == '13') {
-                check_word_and_submit($('.letters_entered').text())
+                check_word_and_submit($('.just_the_letters').text())
             }
             else if (event.which == '8') {
-                $('.letters_entered > .letter:last').remove();
+                $('.just_the_letters > .letter:last').remove();
             }
         }
     })
