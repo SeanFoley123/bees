@@ -44,6 +44,7 @@ $('body').keydown(function(event){
     }
 })
 
+console.log(puzzle_details)
 var outer_letters = puzzle_details.official_letters;
 var index = outer_letters.indexOf(puzzle_details.central_letter_options[0]);
 if (index > -1) {
