@@ -11,6 +11,7 @@
 
 .column {
     display: flex;
+    flex-direction: column;
     padding: 15px;
     width: 50%;
     height: 100%
@@ -22,6 +23,13 @@
 
 .words {
     border: .5px solid grey;
+}
+
+.hive {
+    display: block;
+    margin:auto;
+    width:80%;
+    height: auto;
 }
 
 .cell {
