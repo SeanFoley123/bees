@@ -1,5 +1,6 @@
 
 var puzzle_details = {};
+var score = 0;
 $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
     puzzle_details = json;
     console.log(puzzle_details.official_letters);
@@ -20,7 +21,6 @@ $.getJSON("saved_puzzles/offical_puzzle_2020-04-29.json", function(json) {
 
     function check_word_and_submit(word) {
         if (puzzle_details.official_words.includes(word.toLowerCase())) {
-            if (!)
             $('.word-list').append('<li>' + word.toUpperCase() + '</li>');
         }
         $('.letter').remove();
